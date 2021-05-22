@@ -1,6 +1,5 @@
 package beer
 
-// as tags json definem como os dados vão ser transformados em JSON
 type Beer struct {
 	ID    int64     `json:"id"`
 	Name  string    `json:"name"`
@@ -8,7 +7,6 @@ type Beer struct {
 	Style BeerStyle `json:"style"`
 }
 
-// https://www.thebeerstore.ca/beer-101/beer-types/
 type BeerType int
 
 const (
@@ -18,10 +16,6 @@ const (
 	TypeStout = 4
 )
 
-// desta forma a função String pertence ao tipo e pode ser usada da seguinte
-// forma:
-// var x TypeAle
-// fmt.Println(x.String())
 func (t BeerType) String() string {
 	switch t {
 	case TypeAle:
@@ -38,7 +32,6 @@ func (t BeerType) String() string {
 
 type BeerStyle int
 
-// usando desta o compilador vai automaticamente definir os ids sequencialmente
 const (
 	StyleAmber = iota + 1
 	StyleBlonde

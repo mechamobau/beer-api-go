@@ -1,6 +1,5 @@
 package beer
 
-// define a interface com as funções que serão usadas pelo restante do projeto
 type UseCase interface {
 	GetAll() ([]*Beer, error)
 	Get(ID int64) (*Beer, error)
@@ -9,18 +8,12 @@ type UseCase interface {
 	Remove(ID int64) error
 }
 
-// Em Go, qualquer coisa que implemente as funções de uma interface passa a
-// ser uma implementação válida. Não existe a palavra "implements" como em Java
-// ou em PHP. Desta forma, uma struct, string, inteiro, etc, qualquer coisa pode
-// ser válido, desde que implemente todas as funções.
 type Service struct{}
 
-// esta função retorna um ponteiro em memória para uma estrutura
 func NewService() *Service {
 	return &Service{}
 }
 
-// vamos implementar as funções na próxima etapa
 func (s *Service) GetAll() ([]*Beer, error) {
 	return nil, nil
 }
