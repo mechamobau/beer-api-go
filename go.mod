@@ -1,4 +1,4 @@
-module "\u0096github.com/mechamobau/beer-api-go"
+module github.com/mechamobau/beer-api-go
 
 go 1.16
 
